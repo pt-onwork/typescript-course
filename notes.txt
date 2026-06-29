@@ -1,0 +1,5 @@
+typescript is about type safety 
+it does static checking 
+it is a development tool, just helps improve somethings in the js code 
+integers and float are all called number 
+type inference is automatically judging the type 
