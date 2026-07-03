@@ -3,3 +3,69 @@ it does static checking
 it is a development tool, just helps improve somethings in the js code 
 integers and float are all called number 
 type inference is automatically judging the type 
+never type on function means that the function throws an exception or terminates execution of the program 
+type User = {
+  readonly _id: string 
+  name: string
+  email : string
+  isActive : boolean
+  creditCard?: number 
+}
+
+readonly means nobody would be able to change that value 
+if any property is optional then we can add '?' like in above example 
+const allUsers: User[]=[] means allUsers is an array with elements of type User 
+eg. const allUsers : number[]=[]
+const MLModels : number [][]= [
+  [255,255,255],
+] means array made of array made of numbers
+let score: number | string = 33 union of types 
+
+let score : [number, string] means a tuple of 2 elements with type number and string and in this order only . eg string,number not possible 
+
+enums --> named collection of fixed values which remembers the vlaue and we just have to acccess via the name 
+eg.  const enum SeatChoice{
+  AISLE = 'AISLE',
+  MIDDLE = 2,
+  WINDOW = 3,
+  FOURTH 
+}
+const hcSeat = SeatChoice.AISLE
+enums play similar role to using union types like type  user : 'pilot' | 'copilot' | 'crew' '
+
+interface eg. i felt it to be similar to type alias 
+interface User {
+  readonly debId: number,
+  email: string,
+  userId : number,
+  googleId?: string,
+  // startTrial: ()=> string
+  startTrial(): string,
+  getCoupon(couponname:string, num : number): number
+}
+
+  startTrial(): string, this means it is a method that returns a string 
+
+A class is like a blueprint/structure/template for creating objects.
+class User {
+  public email: string
+  #name: string
+  private readonly city: string = "noida"
+  constructor(email: string,name: string){
+    this.email = email;
+    this.name = name 
+    this.city
+  }
+}
+
+in ts can be written in short as 
+class User {
+  private readonly city: string = "noida"
+  constructor(
+    public email: string, 
+    public name: string,
+    // private userId: string 
+  ) {
+  }
+}
+
