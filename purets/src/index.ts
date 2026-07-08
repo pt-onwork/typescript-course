@@ -1,10 +1,17 @@
 class User {
+
+  private _courseCount = 1
   private readonly city: string = "noida"
   constructor(
     public email: string, 
     public name: string,
     // private userId: string 
   ) {
+  }
+
+  get getAppleEmail(): string{
+    return `apple${this.email }`
+
   }
 }
 

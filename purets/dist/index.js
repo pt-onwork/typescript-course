@@ -1,10 +1,14 @@
 class User {
     email;
     name;
+    _courseCount = 1;
     city = "noida";
     constructor(email, name) {
         this.email = email;
         this.name = name;
+    }
+    get getAppleEmail() {
+        return `apple${this.email}`;
     }
 }
 // class User {
