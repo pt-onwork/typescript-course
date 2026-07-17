@@ -57,10 +57,12 @@ class User {
     this.city
   }
 }
+#name and keyword private name both means that name is being marked as private ie. it is not even accessible outside class. 
+# is natively from js and private is used only in ts and not in js 
 
 in ts can be written in short as 
 class User {
-  private readonly city: string = "noida"
+  private readonly city: string = "noida" the value common to every user created 
   constructor(
     public email: string, 
     public name: string,
@@ -69,3 +71,33 @@ class User {
   }
 }
 
+constructor is a function that runs everytime we create object using the new word 
+
+difference between class and interface, methods body can be defined inside classes but not in interface. also, while using the interface or class, class can build the object wihtout explicitly defining as nam: 'parth' in argument , but directly write classname('parth ')
+also class can have getters and setters but interface cannot 
+
+setter have nothing as return type means no return type defined like void etc no 
+if condition is used inside setter and not everytime we want to change anything and mentioning the if condition outside the class, because multiple people working on the same code might not know the conditions to explicitly check while making the value to their desired value 
+
+public accessible everywhere
+private accessible only in the main class
+protected accessible only in main and inherited class
+
+class Instagram implements TakePhoto{
+  constructor(
+    public cameraMode: string,
+    public filter: string,
+    public burst: number
+  ){}
+}  this means Instagram has atleast all the proerties mentioned int the interface named as TakePhoto, can have more but not less 
+
+extends is used when new class extends old class 
+eg. see in abstractClass.ts 
+if abstract keyword is used before class in class definiton, then the same class can not be used to create new objects. if the abstract class is extended by another class, then the anohter class can be used to create the new object. 
+
+generics --> used when for eg in a function you want to take argument of type x and also want to return the value of type x . this x is not defined in the function definiton but taken when the function is called via the arguments.
+eg. function myGenerics<anything>(val: anything): anything{
+  return val
+}
+
+so if val is called with type number it will return a number 
